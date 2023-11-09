@@ -16,7 +16,8 @@ public class CalcolaBiglietto {
 		int intEta = Integer.valueOf(strEta);
 				
 		in.close();
-		double price = intKm * 0.21;
+		double tariffa = 0.21;
+		double price = intKm * tariffa;
 		
 		System.out.println("il prezzo intero e'" + price + "€");
 		double newPrice = 0;
@@ -29,7 +30,8 @@ public class CalcolaBiglietto {
 			 newPrice = price;
 		}
 		
+		String formattedPrice = String.format("%.2f", newPrice);
 		
-		System.out.println("il prezzo del tuo biglietto e'" + newPrice + "€");
+		System.out.println("il prezzo del tuo biglietto e'" + formattedPrice + "€");
 	}
 }
